@@ -35,3 +35,7 @@ body {
 #search-button:hover {
     background-color: #55a2a269;
 }
+
+.error-msg {
+    color: #d81515f0;
+}
