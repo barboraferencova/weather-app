@@ -11,6 +11,7 @@ function getWeather(city) {
     .then(response => {
       if (!response.ok) {
         throw new Error("City not found");
+       
       }
       return response.json();
     })
@@ -28,6 +29,7 @@ function getWeather(city) {
     })
     .catch(error => {
       console.error("Error - data not loaded:", error);
+       weatherInfo.innerHTML =  `<h3 class = "error-msg"> Please enter a valid city `
     });
 }
 
@@ -36,6 +38,6 @@ button.addEventListener("click", function () {
   if (city) {
     getWeather(city);
   } else {
-    console.log("Please enter a name of a city");
+   weatherInfo.innerHTML = `<h3 class = "error-msg"> Please enter a name of a city `
   }
 });
